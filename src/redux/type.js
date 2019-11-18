@@ -1,0 +1,2 @@
+export const ADD_COUNTER_ONE = 'ADD_COUNTER_ONE';
+export const ADD_COUNTER_TWO = 'ADD_COUNTER_TWO';
