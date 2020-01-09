@@ -11,7 +11,6 @@ function createStore(reducer, initialState) {
     dispatch(action) {
       currentState = currentReducer(currentState, action);
       listener();
-      return action;
     },
     subscribe(newListener) {
       listener = newListener;
