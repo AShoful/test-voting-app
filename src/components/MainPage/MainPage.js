@@ -31,21 +31,9 @@ const MainPage = ({ counterOne, counterTwo, handleOne, handleTwo }) => {
   return (
     <div className={styles.mainPage}>
       <div className={styles.wrapper}>
-        <Card
-          title={data[0].name}
-          url={imgOne}
-          counter={counterOne}
-          handle={handleOne}
-          color={COLORS[0]}
-        />
+        <Card title={data[0].name} url={imgOne} counter={counterOne} handle={handleOne} color={COLORS[0]} />
         <Diagram data={data} COLORS={COLORS} />
-        <Card
-          title={data[1].name}
-          url={imgTwo}
-          counter={counterTwo}
-          handle={handleTwo}
-          color={COLORS[1]}
-        />
+        <Card title={data[1].name} url={imgTwo} counter={counterTwo} handle={handleTwo} color={COLORS[1]} />
       </div>
     </div>
   );
@@ -54,11 +42,8 @@ const MainPage = ({ counterOne, counterTwo, handleOne, handleTwo }) => {
 MainPage.propTypes = {
   handleOne: func.isRequired,
   handleTwo: func.isRequired,
-  counterOne: number,
-  counterTwo: number
+  counterOne: number.isRequired,
+  counterTwo: number.isRequired
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MainPage);
+export default connect(mapStateToProps, mapDispatchToProps)(MainPage);
